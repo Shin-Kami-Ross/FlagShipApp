@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\TodoApi\\TodoApi.csproj": {}
+    "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\todoapi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\TodoApi\\TodoApi.csproj": {
+    "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\todoapi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\todoapi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\TodoApi\\TodoApi.csproj",
+        "projectPath": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\todoapi\\TodoApi.csproj",
         "packagesPath": "C:\\Users\\Lennie Irumachi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\TodoApi\\obj\\",
+        "outputPath": "C:\\Users\\Lennie Irumachi\\Desktop\\FlagShipApp\\backend\\todoapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -51,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.28.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

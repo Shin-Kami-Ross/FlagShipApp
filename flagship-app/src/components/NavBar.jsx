@@ -4,7 +4,7 @@ import { IoPerson } from "react-icons/io5";
 
 export default function NavBar() {
     return (
-        <header className='flex justify-between'>
+        <header className='flex justify-between p-4'>
             <div>
                 <a href='/'><img src='https://logodix.com/logo/680777.png ' alt='Geico logo' width={114} height={114}></img></a>
             </div>

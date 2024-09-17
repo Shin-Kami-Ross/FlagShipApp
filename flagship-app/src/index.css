@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  th{
-    @apply border font-bold italic;
+@layer base {
+  h1 {
+    @apply font-bold text-4xl;
   }
-  td{
-    @apply border font-bold;
-  }
+
+
+}
+
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
 
 body {
@@ -23,4 +32,55 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.policy-cards {
+  height: auto;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+
+  overflow: hidden;
+  border: 2px solid #E9E9E9;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 1rem 0 rgba(0, 0, 0, 0.05);
+  width: 9rem;
+  height: 16.6rem;
+  margin-right: 1.1rem;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.lizardimage {
+  display: block;
+  align-self: flex-start;
+  width: calc(50% - 6rem);
+  margin-top: 5rem;
+  margin-right: 4%;
+  border-radius: 50%;
+  box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.checkbox {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #222;
+  background: #fff;
+  position: relative;
+  align-self: flex-end;
+  border-radius: 0.5rem;
+}
+
+.quotebox {
+  position: relative;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
