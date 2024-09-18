@@ -13,7 +13,7 @@ import meeting from "../image/meeting.png"
 import pet from "../image/pet.png"
 export default function Home() {
     return (
-        <div className='flex flex-col px-12 max-w-7xl m-auto'>
+        <div className='flex flex-col px-12 max-w-7xl m-auto pt-24'>
             <section className='bg-slate-300 p-4 underline' id="specialannouncement">
                 <a href='/'>Our Commitment to Diversity, Equity and Inclusion</a>
 
@@ -88,16 +88,16 @@ export default function Home() {
                 </div>
             </div>
             <div id='quicklinks'>
-<div className='p-12 flex justify-between'>
-    <img src={adjuster} alt="Adujster" width={387} height={387}></img>
-    <div>
-        <h1 className='text-start'>Get Instant Access to Claims and Your Policy</h1>
-        <div className='border rounded-full p-8'></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
+                <div className='p-12 flex justify-between'>
+                    <img src={adjuster} alt="Adujster" width={387} height={387}></img>
+                    <div>
+                        <h1 className='text-start'>Get Instant Access to Claims and Your Policy</h1>
+                        <div className='border rounded-full p-8'></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
             <div id='promotions'>
 

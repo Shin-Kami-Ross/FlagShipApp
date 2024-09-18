@@ -4,13 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NavBar from './components/NavBar';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import LogSlice from "../src/UserReducer"
+const store = configureStore({
+  reducer: {
+    LogInState: LogSlice
+  }
+
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <NavBar/>
+  <Provider store={store}>
+    <NavBar />
     <App />
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
