@@ -1,46 +1,40 @@
 import React, { useState } from 'react'
 import { IoMenu } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
-import MenuLogin from './MenuLogin';
+import LoginMenu from './LoginMenu';
+import MMenu from './Menu';
 
 export default function NavBar() {
 
-
-    const LoginLinks = () => {
-
-        return <MenuLogin />
-    }
-    const MenuLinks = () => {
-
-        return <MenuLogin />
-    }
-
-    const componentMap = {
-        LoginLinks,
-        MenuLinks
-    };
-
-    const componentData = [
-        { type: 'LoginLinks', active: false },
-        { type: 'MenuLinks', active: false }
-    ];
-
     const [Login, setLoginState] = useState(false)
+    const [Logintext, setLoginText] = useState("Log In")
     const [Menu, setMenuState] = useState(false)
+    const [Menutext, setMenuText] = useState('Menu')
 
+    const Logfunc = () => {
+        setLoginState(!Login)
+        if (Logintext === "Log In") setLoginText('Close')
+        else setLoginText('Log In')
+    }
+    const Menufunc = () => {
+        setMenuState(!Menu)
+        if (Menutext === "Menu") setMenuText('Close')
+        else setMenuText('Menu')
+    }
     return (
         <div className=''>
             <header className='flex fixed z-50 bg-white items-center h-24 w-full top-0 left-0 justify-between min-w-[30rem]'>
                 <div>
-                    <a className='' href='/'><img src='https://logodix.com/logo/680777.png ' alt='Geico logo' width={114} height={114}></img></a>
+                    <a href='/'><img src='https://logodix.com/logo/680777.png ' alt='Geico logo' width={114} height={114}></img></a>
                 </div>
                 <div className='flex'>
                     <a className='px-8 underline flex font-bold text-blue-600' href='/'>Espanol</a>
-                    <button onClick={() => setLoginState(!Login)} className='px-8 flex font-bold text-blue-600'><IoPerson size={24} />Log In</button>
-                    <button onClick={() => setMenuState(!Menu)} className='px-8 flex font-bold text-blue-600'><IoMenu size={24} /> Menu</button>
+                    <button onClick={Logfunc} className='px-8 flex font-bold text-blue-600'><IoPerson size={24} />{Logintext}</button>
+                    <button onClick={Menufunc} className='px-8 flex font-bold text-blue-600'><IoMenu size={24} /> {Menutext}</button>
                 </div>
-            </header>        
-            <MenuLogin login={Login}/>
+            </header>
+            <LoginMenu login={Login} />
+            <MMenu login={Menu}  />
         </div>
     )
 }

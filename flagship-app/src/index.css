@@ -7,6 +7,9 @@
     @apply font-bold text-4xl;
   }
 
+  a {
+    @apply font-bold underline;
+  }
 
 }
 
