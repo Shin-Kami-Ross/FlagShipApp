@@ -7,8 +7,20 @@
     @apply font-bold text-4xl;
   }
 
+  h2 {
+    @apply font-bold text-2xl flex justify-between;
+  }
+
+  h3 {
+    @apply font-bold text-2xl;
+  }
+
   a {
     @apply font-bold underline;
+  }
+
+  .icon {
+    @apply text-indigo-500;
   }
 
 }
@@ -58,6 +70,30 @@ code {
   transition: background .2s, border-color .2s;
 }
 
+.bigcard {
+
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  height: auto;
+  align-items: stretch;
+  background-color: #FFFFFF;
+  border-radius: 1.6rem;
+  border: 0.1rem solid rgba(28, 28, 30, 0.05);
+  box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, 0.05);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: initial;
+  position: relative;
+}
+.dot {
+  height: 300px;
+  width: 300px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
 .lizardimage {
   display: block;
   align-self: flex-start;
@@ -84,6 +120,5 @@ code {
   max-width: 96rem;
   margin: 0;
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+
 }

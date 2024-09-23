@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        "slide-in-right": "slide-in-right 0.5s ease-out"
+        "slide-in-right": "slide-in-right 0.5s ease-out",
+        "slide-in-left": "slide-in-left 0.5s ease-out",
       },
       keyframes: {
 
@@ -15,7 +16,15 @@ module.exports = {
           "100%": {
             "transform": "translateX(0)"
           }
-        }
+        },
+        "slide-in-left": {
+          "0%": {
+            "transform": "translateX(0)"
+          },
+          "100%": {
+            "transform": "translateX(100%)"
+          }
+        },
       },
       spacing: {
         //'128': '32rem',

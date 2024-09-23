@@ -12,11 +12,13 @@ export default function NavBar() {
     const [Menutext, setMenuText] = useState('Menu')
 
     const Logfunc = () => {
+        if (Menu) Menufunc();
         setLoginState(!Login)
         if (Logintext === "Log In") setLoginText('Close')
         else setLoginText('Log In')
     }
     const Menufunc = () => {
+        if (Login) Logfunc();
         setMenuState(!Menu)
         if (Menutext === "Menu") setMenuText('Close')
         else setMenuText('Menu')
@@ -33,8 +35,8 @@ export default function NavBar() {
                     <button onClick={Menufunc} className='px-8 flex font-bold text-blue-600'><IoMenu size={24} /> {Menutext}</button>
                 </div>
             </header>
-            <LoginMenu login={Login} />
-            <MMenu login={Menu}  />
+            {!Menu && <LoginMenu login={Login} />}
+            {!Login && <MMenu menu={Menu} />}
         </div>
     )
 }

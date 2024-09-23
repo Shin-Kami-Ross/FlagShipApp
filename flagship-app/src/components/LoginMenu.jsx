@@ -33,7 +33,7 @@ export default function LoginMenu(prop) {
                         <h1>Location</h1>
                         <div className='flex border lg:rounded'>
                             <input className='w-full' type='text'></input>
-                            <FaLocationDot className='p-1 text-indigo-500' size={36} />
+                            <FaLocationDot className='p-1 icon' size={36} />
                         </div>
                         <button className='border rounded-full bg-indigo-500 p-4 font-bold text-white'>Update</button>
                     </div>
