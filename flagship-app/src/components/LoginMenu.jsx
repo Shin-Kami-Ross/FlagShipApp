@@ -1,6 +1,8 @@
 import React, { } from 'react'
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import LoginButton from './LoginPage';
+
 export default function LoginMenu(prop) {
 
     return (
@@ -20,7 +22,7 @@ export default function LoginMenu(prop) {
                         <option>Motorcycle</option>
                         <option>Boat</option>
                     </select>
-                    <button className='relative left-[25%]  w-[60%] p-2 rounded-full border-2 border-indigo-500'>Log In</button>
+                    <LoginButton />
                     <p>New User?<a href='/'>Activate account</a></p>
                     <p>Mobile App <a href='/'>Coming soon</a></p>
                     <div className='border-b-2' />

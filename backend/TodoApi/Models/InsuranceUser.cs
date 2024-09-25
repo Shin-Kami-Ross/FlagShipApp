@@ -8,7 +8,7 @@ namespace TodoApi.Models
 {
     public class InsuranceUser
     {
-         [BsonId]
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? _id { get; set; }
         [BsonRepresentation(BsonType.String)]
