@@ -3,9 +3,12 @@ import { IoMenu } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
 import LoginMenu from './LoginMenu';
 import MMenu from './Menu';
+import { useSelector } from 'react-redux';
+import LogoutButton from './LogoutPage';
 
 export default function NavBar() {
 
+    
     const [Login, setLoginState] = useState(false)
     const [Logintext, setLoginText] = useState("Log In")
     const [Menu, setMenuState] = useState(false)
@@ -31,7 +34,9 @@ export default function NavBar() {
                 </div>
                 <div className='flex'>
                     <a className='px-8 underline flex font-bold text-blue-600' href='/'>Espanol</a>
+
                     <button onClick={Logfunc} className='px-8 flex font-bold text-blue-600'><IoPerson size={24} />{Logintext}</button>
+
                     <button onClick={Menufunc} className='px-8 flex font-bold text-blue-600'><IoMenu size={24} /> {Menutext}</button>
                 </div>
             </header>

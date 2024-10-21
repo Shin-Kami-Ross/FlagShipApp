@@ -1,14 +1,15 @@
-using TodoApi.Models;
-using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using TodoApi.Data;
-
+using TodoApi.Models;
 
 [Route("api/[controller]")]
 [ApiController]
+[EnableCors("ReactApp")]
 public class PolicyController : ControllerBase
 {
     private readonly MongoDbContext _context;
@@ -19,6 +20,7 @@ public class PolicyController : ControllerBase
     }
 
     [HttpGet]
+ 
     public async Task<ActionResult<IEnumerable<Policy>>> Get()
     {
         var articles = await _context.Policy.Find(_ => true).ToListAsync();
@@ -26,6 +28,7 @@ public class PolicyController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    
     public async Task<ActionResult<Policy>> Get(string id)
     {
         var article = await _context.Policy.Find(a => a._id == id).FirstOrDefaultAsync();
@@ -39,6 +42,7 @@ public class PolicyController : ControllerBase
     }
 
     [HttpPost]
+   
     public async Task<IActionResult> Post([FromBody] Policy article)
     {
         await _context.Policy.InsertOneAsync(article);
@@ -46,6 +50,7 @@ public class PolicyController : ControllerBase
     }
 
     [HttpPut("{id}")]
+   
     public async Task<IActionResult> Put(string id, [FromBody] Policy article)
     {
         var existingArticle = await _context.Policy.Find(a => a._id == id).FirstOrDefaultAsync();
@@ -61,6 +66,7 @@ public class PolicyController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    
     public async Task<IActionResult> Delete(string id)
     {
         var article = await _context.Policy.Find(a => a._id == id).FirstOrDefaultAsync();
